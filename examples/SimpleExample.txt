@@ -1,0 +1,22 @@
+import pyPID
+pidOBJ=pyPID.PID()
+
+pidOBJ.SetSampleTime(1)
+
+pidOBJ.StartPID()
+pidOBJ.clock=1
+pidOBJ.ComputePID(0,1)
+pidOBJ.SetTunings(1,.4,.6)
+pidOBJ.SetSampleTime(1)
+pidOBJ.clock=2
+pidOBJ.ComputePID(0,1)
+pidOBJ.clock=3
+pidOBJ.ComputePID(0,1)
+pidOBJ.clock=4
+pidOBJ.ComputePID(0,1)
+pidOBJ.clock=5
+pidOBJ.ComputePID(0,1)
+pidOBJ.clock=6
+pidOBJ.ComputePID(0,1)
+pidOBJ.StopPID()
+pidOBJ.Reset()
